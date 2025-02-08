@@ -1,4 +1,6 @@
-script
+<script>
+console.log('hello')
+</script>
 
 <template>
   <div>
