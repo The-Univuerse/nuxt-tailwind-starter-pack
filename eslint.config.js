@@ -30,7 +30,7 @@ export default antfu({
   },
 
   rules: {
-    'node/prefer-global/process': ['error'],
+    'node/prefer-global/process': 'off',
   },
   javascript: {
     overrides: {
