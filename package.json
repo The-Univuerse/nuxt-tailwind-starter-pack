@@ -21,12 +21,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.1.1",
-    "@eslint/js": "^9.19.0",
-    "@stylistic/eslint-plugin": "^3.0.1",
     "eslint": "^9.19.0",
-    "eslint-plugin-format": "^1.0.1",
-    "eslint-plugin-perfectionist": "^4.8.0",
-    "eslint-plugin-vue": "^9.32.0",
-    "typescript-eslint": "^8.23.0"
+    "eslint-plugin-format": "^1.0.1"
   }
 }

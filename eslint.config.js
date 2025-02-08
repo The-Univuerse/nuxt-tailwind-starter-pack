@@ -28,9 +28,9 @@ export default antfu({
       }],
     },
   },
-  
+
   rules: {
-    "node/prefer-global/process": ['error'],
+    'node/prefer-global/process': ['error'],
   },
   javascript: {
     overrides: {
