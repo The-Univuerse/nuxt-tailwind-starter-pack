@@ -1,7 +1,5 @@
 <template>
-  <div class="h-screen">
-    <div class="p-5">
-      The Nuxt Universe
-    </div>
+  <div class="flex h-full justify-center items-center">
+    Hello
   </div>
 </template>

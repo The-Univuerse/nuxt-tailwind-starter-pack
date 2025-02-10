@@ -3,3 +3,15 @@
 html {
   font-family: 'Roboto', serif;
 }
+
+:root {
+  --background: #ffffff;
+}
+
+.dark {
+  --background: #070707;
+}
+
+@theme {
+  --color-background: var(--background);
+}

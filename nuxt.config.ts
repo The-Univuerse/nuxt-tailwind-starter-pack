@@ -28,4 +28,28 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  modules: [
+    '@nuxt/icon',
+    '@nuxtjs/color-mode',
+    // '@pinia/nuxt',
+  ],
+  icon: {
+    class: 'icon', // default <Icon> class applied
+    mode: 'css', //
+    serverBundle: {
+      collections: ['tabler'],
+      externalizeIconsJson: true,
+    },
+  },
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'localStorage', // or 'sessionStorage' or 'cookie'
+    storageKey: 'nuxt-color-mode',
+  },
 })
