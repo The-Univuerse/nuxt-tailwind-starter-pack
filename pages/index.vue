@@ -1,3 +1,31 @@
+<script setup lang="ts">
+const featuresList = computed(() => {
+  return [
+    {
+      icon: 'skill-icons:nuxtjs-light',
+    },
+    {
+      icon: 'skill-icons:tailwindcss-light',
+    },
+    {
+      icon: 'skill-icons:pinia-light',
+    },
+    {
+      icon: 'logos:pwa',
+    },
+    {
+      icon: 'tabler:sun-moon',
+    },
+    {
+      icon: 'tabler:seo',
+    },
+    {
+      icon: 'logos:vueuse',
+    },
+  ]
+})
+</script>
+
 <template>
   <div class="flex h-full relative text-white justify-center items-center">
     <div class="flex flex-col">
@@ -15,6 +43,14 @@
         <img class="w-40" src="/assets/icon/nuxt-dark.png" alt="" />
         <Icon name="tabler:plus" class="text-4xl text-secondary self-end" />
         <img class="w-52 self-center" src="/assets/icon/tailwindcss-dark.svg" alt="" />
+      </div>
+
+      <div class="flex gap-5 mt-16 items-center justify-center">
+        <Icon
+          v-for="(data, index) in featuresList"
+          :key="index"
+          :name="data.icon" class="text-3xl"
+        />
       </div>
     </div>
   </div>
