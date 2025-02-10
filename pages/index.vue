@@ -1,22 +1,21 @@
 <template>
-  <main class="w-full h-full relative">
-    <LightBar />
-
-    <div
-      class="absolute bottom-32 left-1/2 -translate-x-1/2 transform w-full flex flex-col items-center px-5"
-    >
-      <p
-        class="rounded-full border border-white/50 px-4 py-1 text-xs font-bold uppercase tracking-widest text-white opacity-50"
+  <div class="flex h-full relative text-white justify-center items-center">
+    <div class="flex flex-col">
+      <h1
+        class="mt-8 bg-gradient-to-br from-white via-emerald-100 to-emerald bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-6xl"
       >
-        New Version 1.0
+        Welcome to the Universe
+      </h1>
+
+      <p class="text-secondary mt-2 text-lg text-center font-medium">
+        Save your crutial time with our universe
       </p>
 
-      <h1
-        class="mt-8 bg-gradient-to-br from-white via-emerald-50 to-emerald-500/50 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-6xl"
-      >
-        Stunning UI is a better way <br />
-        to build websites
-      </h1>
+      <div class="flex gap-5 mt-10 items-center justify-center">
+        <img class="w-40" src="/assets/icon/nuxt-dark.png" alt="" />
+        <Icon name="tabler:plus" class="text-4xl text-secondary self-end" />
+        <img class="w-52 self-center" src="/assets/icon/tailwindcss-dark.svg" alt="" />
+      </div>
     </div>
-  </main>
+  </div>
 </template>
