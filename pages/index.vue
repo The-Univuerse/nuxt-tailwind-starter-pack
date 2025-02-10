@@ -28,15 +28,33 @@ const featuresList = computed(() => {
 
 <template>
   <div class="flex h-full relative text-white justify-center items-center">
-    <div class="flex flex-col">
+    <div class="flex absolute z-20 flex-col">
+      <div class="flex justify-center">
+        <NuxtLink href="https://github.com/andriferry/" target="_blank">
+          <div
+            class="group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+          >
+            <ShimmerText
+              class="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400"
+            >
+              ✨ Follow us on github
+              <Icon
+                name="tabler:arrow-narrow-right"
+                class="text-xl ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
+              />
+            </ShimmerText>
+          </div>
+        </NuxtLink>
+      </div>
+
       <h1
         class="mt-8 bg-gradient-to-br from-white via-emerald-100 to-emerald bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-6xl"
       >
-        Welcome to the Universe
+        Welcome to the Univuerse
       </h1>
 
       <p class="text-secondary mt-2 text-xl text-center font-medium">
-        Save your crucial time with our universe
+        Save your crucial time with our univuerse
       </p>
 
       <div class="flex gap-5 mt-10 items-center justify-center">
