@@ -6,12 +6,18 @@ html {
 
 :root {
   --background: #ffffff;
+  --secondary: #65758b;
+  --primary: #ec4699;
 }
 
 .dark {
   --background: #070707;
+  --secondary: #65758b;
+  --primary: #ec4699;
 }
 
 @theme {
   --color-background: var(--background);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
 }

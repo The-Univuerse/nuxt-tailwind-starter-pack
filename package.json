@@ -17,6 +17,7 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/color-mode": "^3.5.2",
     "@tailwindcss/vite": "^4.0.4",
+    "@vueuse/motion": "^2.2.6",
     "nuxt": "^3.15.4",
     "tailwindcss": "^4.0.4",
     "vue": "latest",
@@ -26,5 +27,6 @@
     "@antfu/eslint-config": "^4.1.1",
     "eslint": "^9.19.0",
     "eslint-plugin-format": "^1.0.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

@@ -31,13 +31,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/icon',
     '@nuxtjs/color-mode',
+    '@vueuse/motion/nuxt',
     // '@pinia/nuxt',
   ],
   icon: {
     class: 'icon', // default <Icon> class applied
     mode: 'css', //
     serverBundle: {
-      collections: ['tabler'],
+      collections: ['tabler', 'skill-icons'],
       externalizeIconsJson: true,
     },
   },
