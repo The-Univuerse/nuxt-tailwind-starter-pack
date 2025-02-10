@@ -36,7 +36,7 @@ const featuresList = computed(() => {
       </h1>
 
       <p class="text-secondary mt-2 text-xl text-center font-medium">
-        Save your crutial time with our universe
+        Save your crucial time with our universe
       </p>
 
       <div class="flex gap-5 mt-10 items-center justify-center">

@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/color-mode',
     '@vueuse/motion/nuxt',
+    'nuxt-aos',
     // '@pinia/nuxt',
   ],
   icon: {
