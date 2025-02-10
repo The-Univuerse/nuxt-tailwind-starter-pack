@@ -28,8 +28,10 @@ const featuresList = computed(() => {
 
 <template>
   <div class="flex h-full relative text-white justify-center items-center">
-    <div class="flex absolute z-20 flex-col">
-      <div class="flex justify-center">
+    <div class="flex z-20 relative flex-col">
+      <div
+        class="flex justify-center"
+      >
         <NuxtLink href="https://github.com/andriferry/" target="_blank">
           <div
             class="group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
