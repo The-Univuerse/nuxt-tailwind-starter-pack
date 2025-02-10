@@ -31,11 +31,29 @@
   },
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
-  // Extension: Stylelint
-  "stylelint.packageManager": "pnpm",
-  "stylelint.validate": [
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
     "css",
+    "less",
     "scss",
-    "vue"
+    "pcss",
+    "postcss"
   ]
 }
