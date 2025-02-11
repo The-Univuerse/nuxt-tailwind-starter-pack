@@ -88,7 +88,7 @@ const tailwindcssIcon = computed(() => colorMode.value === 'light' ? Tailwindcss
               v-for="(data, index) in featuresList"
               :key="index"
               :name="data.icon"
-              class="text-3xl"
+              class="text-3xl text-secondary transition duration-300 ease-in-out hover:text-white cursor-pointer hover:grayscale-0 grayscale"
             />
           </div>
         </div>
