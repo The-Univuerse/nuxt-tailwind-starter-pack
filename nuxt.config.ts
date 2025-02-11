@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     class: 'icon', // default <Icon> class applied
     mode: 'css', //
     serverBundle: {
-      collections: ['tabler', 'skill-icons', 'logos', 'line-md', 'devicon'],
+      collections: ['tabler', 'logos', 'line-md', 'devicon'],
       externalizeIconsJson: true,
     },
   },

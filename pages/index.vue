@@ -9,22 +9,16 @@ const colorMode = useColorMode()
 const featuresList = computed(() => {
   return [
     {
-      icon: colorMode.value === 'light' ? 'skill-icons:nuxtjs-dark' : 'skill-icons:nuxtjs-light',
+      icon: 'logos:nuxt-icon',
     },
     {
-      icon: colorMode.value === 'light' ? 'skill-icons:tailwindcss-dark' : 'skill-icons:tailwindcss-light',
+      icon: 'devicon:tailwindcss',
     },
     {
-      icon: colorMode.value === 'light' ? 'skill-icons:pinia-dark' : 'skill-icons:pinia-light',
+      icon: 'logos:pinia',
     },
     {
       icon: 'logos:pwa',
-    },
-    {
-      icon: 'tabler:sun-moon',
-    },
-    {
-      icon: 'tabler:seo',
     },
     {
       icon: 'logos:vueuse',
@@ -32,12 +26,15 @@ const featuresList = computed(() => {
     {
       icon: 'devicon:veevalidate',
     },
+    {
+      icon: 'devicon:eslint',
+    },
   ]
 })
 
 const nuxtIcon = computed(() => colorMode.value === 'light' ? NuxtIconLight : NuxtIconDark)
 const tailwindcssIcon = computed(() => colorMode.value === 'light' ? TailwindcssLight : TailwindcssDark)
-const headHero = computed(() => colorMode.value === 'light' ? 'text-[#213547]' : 'text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text')
+const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 'text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text')
 </script>
 
 <template>
@@ -99,7 +96,7 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-[#213547]' :
               v-for="(data, index) in featuresList"
               :key="index"
               :name="data.icon"
-              class="text-3xl text-secondary transition duration-300 ease-in-out hover:text-white cursor-pointer hover:grayscale-0 grayscale"
+              class="text-3xl text-secondary transition duration-300 ease-in-out dark:hover:text-white cursor-pointer"
             />
           </div>
         </div>

@@ -2,7 +2,6 @@
 interface Theme {
   icon: string
   value: string
-  changeValue: string
 }
 
 const colorMode = useColorMode()
@@ -21,7 +20,6 @@ const themes = ref<Theme[]>([
   {
     icon: 'line-md:sunny-filled-loop',
     value: 'light',
-    changeValue: 'dark',
   },
 
 ])
@@ -32,36 +30,30 @@ const currentTheme = computed<Theme>(() => {
 })
 
 const switchTheme = (value: string): void => {
-  console.log(value)
   colorMode.preference = value
 }
-
-// function switchTheme(value: string): void {
-//   // colorMode.preference = 'light'
-//   console.log(value)
-// }
 </script>
 
 <template>
-  <div class="w-full z-20 flex border-b gap-3 border-neutral-900 text-white justify-between p-5">
+  <div class="w-full flex border-b gap-3 border-slate-200  dark:border-neutral-900 justify-between p-5">
     <div class="flex gap-3 items-center">
       <NuxtLink
         to="/"
-        class="text-secondary transition duration-300 ease-in-out hover:text-white"
+        class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         home
       </NuxtLink>
 
       <NuxtLink
         to="/about"
-        class="text-secondary transition duration-300 ease-in-out hover:text-white"
+        class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         about
       </NuxtLink>
 
       <NuxtLink
         to="/form"
-        class="text-secondary transition duration-300 ease-in-out hover:text-white"
+        class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         form
       </NuxtLink>
@@ -71,7 +63,7 @@ const switchTheme = (value: string): void => {
       <NuxtLink to="/">
         <Icon
           name="line-md:github"
-          class="text-2xl transition duration-300 ease-in-out hover:text-white text-secondary"
+          class="text-2xl transition duration-300 ease-in-out hover:text-neutral-400 text-secondary"
         />
       </NuxtLink>
 
@@ -81,7 +73,7 @@ const switchTheme = (value: string): void => {
       >
         <Icon
           :name="currentTheme.icon"
-          class="text-2xl transition duration-300 ease-in-out hover:text-white text-secondary"
+          class="text-2xl transition duration-300 ease-in-out hover:text-neutral-400 text-secondary"
         />
       </button>
     </div>

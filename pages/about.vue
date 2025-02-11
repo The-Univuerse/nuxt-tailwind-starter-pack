@@ -54,7 +54,7 @@ const { playState } = useAnimate(
           class="flex gap-3 justify-center mt-3"
         >
           <button
-            class="cursor-pointer w-10  bg-secondary flex items-center justify-center py-1 px-3 rounded-lg"
+            class="cursor-pointer w-10 bg-neutral-400 flex items-center justify-center py-1 px-3 rounded-lg"
             @click="counter--"
           >
             <Icon
@@ -63,10 +63,10 @@ const { playState } = useAnimate(
             />
           </button>
 
-          <span>{{ counter }}</span>
+          <span class="text-black dark:text-neutral-400">{{ counter }}</span>
 
           <button
-            class="cursor-pointer w-10  bg-secondary flex items-center justify-center py-1 px-3 rounded-lg"
+            class="cursor-pointer w-10 bg-neutral-400 flex items-center justify-center py-1 px-3 rounded-lg"
             @click="counter++"
           >
             <Icon
