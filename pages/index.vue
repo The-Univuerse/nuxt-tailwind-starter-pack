@@ -4,7 +4,18 @@ import NuxtIconLight from '@/assets/icon/nuxt-light.png'
 import TailwindcssDark from '@/assets/icon/tailwindcss-dark.svg'
 import TailwindcssLight from '@/assets/icon/tailwindcss-light.svg'
 
+const route = useRoute()
 const colorMode = useColorMode()
+
+definePageMeta({
+  title: 'Home',
+})
+
+useHead({
+  titleTemplate: (titleChunk) => {
+    return `${titleChunk} - ${route.meta.title}`
+  },
+})
 
 const featuresList = computed(() => {
   return [

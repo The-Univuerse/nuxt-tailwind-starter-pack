@@ -1,6 +1,18 @@
 <script lang="ts" setup>
 import type { MaybeElement } from '@vueuse/core'
 
+definePageMeta({
+  title: 'About',
+})
+
+const route = useRoute()
+
+useHead({
+  titleTemplate: (titleChunk) => {
+    return `${titleChunk} - ${route.meta.title}`
+  },
+})
+
 const counterStore = useNumberCounter()
 const { counter } = storeToRefs(counterStore)
 

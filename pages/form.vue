@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import type { PrivateFormContext } from 'vee-validate'
 
+definePageMeta({
+  title: 'Form',
+})
+
+const route = useRoute()
+
+useHead({
+  titleTemplate: (titleChunk) => {
+    return `${titleChunk} - ${route.meta.title}`
+  },
+})
+
 const form = ref < PrivateFormContext > ()
 
 const email = ref('')
