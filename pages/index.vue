@@ -29,6 +29,9 @@ const featuresList = computed(() => {
     {
       icon: 'logos:vueuse',
     },
+    {
+      icon: 'devicon:veevalidate',
+    },
   ]
 })
 

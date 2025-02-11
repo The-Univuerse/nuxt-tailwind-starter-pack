@@ -45,10 +45,17 @@ export default antfu({
     overrides: {
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+      'no-useless-catch': 'off',
+      'no-alert': 'off',
     },
   },
   typescript: true,
-  stylistic: true,
+  stylistic: {
+    indent: 2,
+    overrides: {
+      'antfu/top-level-function': 'off',
+    },
+  },
   perfectionist: true,
   imports: true,
   eslint: true,
