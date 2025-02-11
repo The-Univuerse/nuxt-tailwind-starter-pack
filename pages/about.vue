@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import type { MaybeElement } from '@vueuse/core'
 
+const counterStore = useNumberCounter()
+const { counter } = storeToRefs(counterStore)
+
 const el = useTemplateRef<MaybeElement>('el')
 
 const { playState } = useAnimate(
@@ -40,6 +43,38 @@ const { playState } = useAnimate(
         >
           Save your crucial time with our univuerse
         </p>
+      </Transition>
+
+      <Transition
+        name="slide-fade"
+        mode="out-in"
+      >
+        <div
+          v-if="playState === 'finished'"
+          class="flex gap-3 justify-center mt-3"
+        >
+          <button
+            class="cursor-pointer w-10  bg-secondary flex items-center justify-center py-1 px-3 rounded-lg"
+            @click="counter--"
+          >
+            <Icon
+              name="tabler:minus"
+              class="text-lg"
+            />
+          </button>
+
+          <span>{{ counter }}</span>
+
+          <button
+            class="cursor-pointer w-10  bg-secondary flex items-center justify-center py-1 px-3 rounded-lg"
+            @click="counter++"
+          >
+            <Icon
+              name="tabler:plus"
+              class="text-lg"
+            />
+          </button>
+        </div>
       </Transition>
     </div>
   </div>
