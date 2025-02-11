@@ -12,7 +12,7 @@ html {
 }
 
 .dark {
-  --background: #070707;
+  --background: #1b1b1f;
   --secondary: #737373;
   --primary: #ec4699;
   --shimmer-width: 10px;

@@ -37,6 +37,7 @@ const featuresList = computed(() => {
 
 const nuxtIcon = computed(() => colorMode.value === 'light' ? NuxtIconLight : NuxtIconDark)
 const tailwindcssIcon = computed(() => colorMode.value === 'light' ? TailwindcssLight : TailwindcssDark)
+const headHero = computed(() => colorMode.value === 'light' ? 'text-background' : 'text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text')
 </script>
 
 <template>
@@ -59,11 +60,18 @@ const tailwindcssIcon = computed(() => colorMode.value === 'light' ? Tailwindcss
         </NuxtLink>
       </div>
 
-      <h1 class="mt-8 bg-gradient-to-br from-white via-emerald-100 to-emerald bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-6xl">
-        Welcome to the Univuerse
+      <h1
+        class="mt-8 font-extrabold text-center text-6xl tracking-tight md:text-9xl"
+        :class="headHero"
+      >
+        Welcome to the <br />
+
+        <span class="text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text">
+          Univuerse
+        </span>
       </h1>
 
-      <p class="text-secondary mt-2 text-xl text-center font-medium">
+      <p class="text-secondary mt-3 text-lg md:text-xl text-center font-medium">
         Save your crucial time with our univuerse
       </p>
 
