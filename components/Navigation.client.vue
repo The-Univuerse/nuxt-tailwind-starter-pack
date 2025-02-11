@@ -2,6 +2,7 @@
 interface Theme {
   icon: string
   value: string
+  changeValue: string
 }
 
 const colorMode = useColorMode()
@@ -20,19 +21,25 @@ const themes = ref<Theme[]>([
   {
     icon: 'line-md:sunny-filled-loop',
     value: 'light',
+    changeValue: 'dark',
   },
 
 ])
 
 const currentTheme = computed<Theme>(() => {
   const dataTheme = themes.value.find((data: Theme) => data.value !== colorMode.value)
-  return dataTheme || { icon: '', value: '' }
+  return dataTheme || { icon: '', value: '', changeValue: '' }
 })
 
-function switchTheme(value: string): void {
-  // colorMode.preference = 'light'
+const switchTheme = (value: string): void => {
   console.log(value)
+  colorMode.preference = value
 }
+
+// function switchTheme(value: string): void {
+//   // colorMode.preference = 'light'
+//   console.log(value)
+// }
 </script>
 
 <template>
