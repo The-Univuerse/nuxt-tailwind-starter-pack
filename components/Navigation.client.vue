@@ -36,14 +36,21 @@ function switchTheme(value: string): void {
 </script>
 
 <template>
-  <div class="w-full z-20 flex border-b border-neutral-900 text-white justify-end absolute p-5">
+  <div class="w-full z-20 flex border-b gap-3 border-neutral-900 text-white justify-end absolute p-5">
+    <NuxtLink to="/">
+      <Icon
+        name="line-md:github"
+        class="text-2xl transition duration-300 ease-in-out hover:text-white text-secondary"
+      />
+    </NuxtLink>
+
     <button
       class="cursor-pointer"
       @click="switchTheme(currentTheme.value)"
     >
       <Icon
         :name="currentTheme.icon"
-        class="text-2xl grayscale"
+        class="text-2xl transition duration-300 ease-in-out hover:text-white text-secondary"
       />
     </button>
   </div>
