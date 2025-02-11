@@ -14,11 +14,11 @@ watch(colorTheme, (value) => {
 
 const themes = ref<Theme[]>([
   {
-    icon: 'line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition',
+    icon: 'line-md:sunny-filled-loop',
     value: 'dark',
   },
   {
-    icon: 'line-md:sunny-filled-loop',
+    icon: 'line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition',
     value: 'light',
   },
 

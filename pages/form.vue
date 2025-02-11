@@ -23,8 +23,8 @@ const submit = async () => {
 </script>
 
 <template>
-  <div class="text-white flex justify-center items-center w-full h-full p-5">
-    <div class="w-[450px] p-5 bg-secondary/30 flex flex-col gap-3 rounded-xl">
+  <div class="text-accent dark:text-white flex justify-center items-center w-full h-full p-5">
+    <div class="w-[450px] p-5 shadow-2xl bg-gray-200 dark:bg-secondary/30 flex flex-col gap-3 rounded-xl">
       <FormObserver ref="form">
         <FieldProvider
           v-slot="{ errors, field }"
@@ -53,7 +53,7 @@ const submit = async () => {
           v-slot="{ errors, field }"
           v-model="password"
           name="password"
-          label="Passwowrd"
+          label="Password"
           rules="required"
         >
           <p class="mb-1">
