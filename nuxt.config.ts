@@ -34,16 +34,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
   ],
-  // i18n: {
-  //   vueI18n: './locales/i18n.config.ts',
-  //   // if you are using custom path, default
-  // },
 
   i18n: {
     lazy: true,
     defaultLocale: 'en',
     langDir: 'locales',
-    locales: [{ code: 'en', file: 'en', name: 'English' }, { code: 'fe', file: 'fe', name: 'France' }],
+    locales: [{ code: 'en', file: 'en', name: 'English' }, { code: 'fr', file: 'fr', name: 'France' }],
   },
 
   pinia: {

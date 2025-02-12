@@ -1,11 +1,19 @@
 <script setup lang="ts">
+import { setLocale } from '@vee-validate/i18n'
+
 interface Theme {
   icon: string
   value: string
 }
 
+interface Lang {
+  title: string
+  value: string
+  changeValue: 'en' | 'fr'
+}
+
 const colorMode = useColorMode()
-const { setLocale, locale } = useI18n()
+const { setLocale: changeLang, locale } = useI18n()
 
 const colorTheme = toRef(colorMode.value)
 
@@ -21,15 +29,15 @@ const themes = ref<Theme[]>([
 
 ])
 
-const allAvailableLocales = ref([
+const allAvailableLocales = ref<Lang[]>([
   {
     title: 'en',
     value: 'en',
-    changeValue: 'fe',
+    changeValue: 'fr',
   },
   {
-    title: 'fe',
-    value: 'fe',
+    title: 'fr',
+    value: 'fr',
     changeValue: 'en',
   },
 ])
@@ -39,10 +47,9 @@ const currentTheme = computed<Theme>(() => {
   return dataTheme || { icon: '', value: '', changeValue: '' }
 })
 
-const currentLang = computed(() => {
+const currentLang = computed<Lang>(() => {
   const currentDataLang = allAvailableLocales.value.find(item => item.value === locale.value)
-
-  return currentDataLang
+  return currentDataLang || { title: '', value: '', changeValue: 'en' }
 })
 
 watch(colorTheme, (value) => {
@@ -51,6 +58,11 @@ watch(colorTheme, (value) => {
 
 const switchTheme = (value: string): void => {
   colorMode.preference = value
+}
+
+const switchLang = (langValue: Lang['changeValue']) => {
+  changeLang(langValue)
+  setLocale(langValue)
 }
 </script>
 
@@ -81,8 +93,9 @@ const switchTheme = (value: string): void => {
 
     <div class="flex gap-3">
       <button
+        v-if="currentLang"
         class="cursor-pointer text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
-        @click="setLocale(currentLang.changeValue)"
+        @click="switchLang(currentLang.changeValue)"
       >
         {{ currentLang.title }}
       </button>

@@ -6,5 +6,11 @@
     "home": "maison",
     "about": "à propos",
     "form": "formulaire"
+  },
+  "form": {
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmez le mot de passe",
+    "submit": "Soumettre"
   }
 }

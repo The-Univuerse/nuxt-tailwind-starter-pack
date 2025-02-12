@@ -6,5 +6,11 @@
     "home": "home",
     "about": "about",
     "form": "form"
+  },
+  "form": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Submit"
   }
 }

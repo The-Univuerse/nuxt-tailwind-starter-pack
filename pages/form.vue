@@ -42,11 +42,11 @@ const submit = async () => {
           v-slot="{ errors, field }"
           v-model="email"
           name="email"
-          label="Email"
+          :label="$t('form.email')"
           rules="required|email"
         >
           <p class="mb-1">
-            Email
+            {{ $t('form.email') }}
           </p>
           <input
             v-bind="field"
@@ -65,11 +65,11 @@ const submit = async () => {
           v-slot="{ errors, field }"
           v-model="password"
           name="password"
-          label="Password"
+          :label="$t('form.password')"
           rules="required"
         >
           <p class="mb-1">
-            Password
+            {{ $t('form.password') }}
           </p>
           <input
             v-bind="field"
@@ -88,11 +88,11 @@ const submit = async () => {
           v-slot="{ errors, field }"
           v-model="confirmPassword"
           name="username"
-          label="Password"
+          :label="$t('form.confirmPassword')"
           rules="confirmed:@password"
         >
           <p class="mb-1">
-            Confirm Password
+            {{ $t('form.confirmPassword') }}
           </p>
           <input
             v-bind="field"
@@ -113,7 +113,7 @@ const submit = async () => {
             class=" bg-white cursor-pointer text-black rounded-lg px-4 py-1"
             @click="submit"
           >
-            Submit
+            {{ $t('form.submit') }}
           </button>
         </div>
       </FormObserver>
