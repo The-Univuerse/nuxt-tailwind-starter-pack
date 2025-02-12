@@ -69,26 +69,26 @@ const switchLang = (langValue: Lang['changeValue']) => {
 <template>
   <div class="w-full flex border-b gap-3 border-slate-200  dark:border-neutral-900 justify-between p-5">
     <div class="flex gap-3 items-center">
-      <NuxtLink
+      <NuxtLinkLocale
         to="/"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         {{ $t('routes.home') }}
-      </NuxtLink>
+      </NuxtLinkLocale>
 
-      <NuxtLink
+      <NuxtLinkLocale
         to="/about"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         {{ $t('routes.about') }}
-      </NuxtLink>
+      </NuxtLinkLocale>
 
-      <NuxtLink
+      <NuxtLinkLocale
         to="/form"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
         {{ $t('routes.form') }}
-      </NuxtLink>
+      </NuxtLinkLocale>
     </div>
 
     <div class="flex gap-3">
