@@ -54,7 +54,7 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 't
       <div class="flex relative flex-col">
         <div class="flex justify-center">
           <NuxtLink
-            href="https://github.com/andriferry/"
+            href="https://github.com/The-Univuerse/nuxt-tailwind-starter-pack"
             target="_blank"
           >
             <div class="group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">

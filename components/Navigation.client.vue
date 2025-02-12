@@ -100,7 +100,10 @@ const switchLang = (langValue: Lang['changeValue']) => {
         {{ currentLang.title }}
       </button>
 
-      <NuxtLink to="/">
+      <NuxtLink
+        target="_blank"
+        href="/https://github.com/The-Univuerse/nuxt-tailwind-starter-pack"
+      >
         <Icon
           name="line-md:github"
           class="text-2xl transition duration-300 ease-in-out hover:text-neutral-400 text-secondary"
