@@ -1,0 +1,10 @@
+{
+  "welcome": "Bienvenue au",
+  "followus": "Suivez-nous sur",
+  "tagline": "Économisez votre temps crucial avec notre",
+  "routes": {
+    "home": "maison",
+    "about": "à propos",
+    "form": "formulaire"
+  }
+}

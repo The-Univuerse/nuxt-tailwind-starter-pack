@@ -59,7 +59,7 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 't
           >
             <div class="group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
               <ShimmerText class="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                ✨ Follow us on github
+                ✨ {{ $t('followus') }} github
                 <Icon
                   name="tabler:arrow-narrow-right"
                   class="text-xl ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
@@ -73,7 +73,7 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 't
           class="mt-8 font-extrabold text-center text-6xl tracking-tight md:text-9xl"
           :class="headHero"
         >
-          Welcome to the <br />
+          {{ $t('welcome') }} the <br />
 
           <span class="text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text">
             Univuerse
@@ -81,7 +81,7 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 't
         </h1>
 
         <p class="text-secondary mt-3 text-lg md:text-xl text-center font-medium">
-          Save your crucial time with our univuerse
+          {{ $t('tagline') }} univuerse
         </p>
 
         <div class="flex gap-5 mt-10 items-center justify-center">

@@ -5,12 +5,9 @@ interface Theme {
 }
 
 const colorMode = useColorMode()
+const { setLocale, locale } = useI18n()
 
 const colorTheme = toRef(colorMode.value)
-
-watch(colorTheme, (value) => {
-  colorMode.preference = value
-})
 
 const themes = ref<Theme[]>([
   {
@@ -24,9 +21,32 @@ const themes = ref<Theme[]>([
 
 ])
 
+const allAvailableLocales = ref([
+  {
+    title: 'en',
+    value: 'en',
+    changeValue: 'fe',
+  },
+  {
+    title: 'fe',
+    value: 'fe',
+    changeValue: 'en',
+  },
+])
+
 const currentTheme = computed<Theme>(() => {
   const dataTheme = themes.value.find((data: Theme) => data.value !== colorMode.value)
   return dataTheme || { icon: '', value: '', changeValue: '' }
+})
+
+const currentLang = computed(() => {
+  const currentDataLang = allAvailableLocales.value.find(item => item.value === locale.value)
+
+  return currentDataLang
+})
+
+watch(colorTheme, (value) => {
+  colorMode.preference = value
 })
 
 const switchTheme = (value: string): void => {
@@ -41,25 +61,32 @@ const switchTheme = (value: string): void => {
         to="/"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
-        home
+        {{ $t('routes.home') }}
       </NuxtLink>
 
       <NuxtLink
         to="/about"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
-        about
+        {{ $t('routes.about') }}
       </NuxtLink>
 
       <NuxtLink
         to="/form"
         class="text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
       >
-        form
+        {{ $t('routes.form') }}
       </NuxtLink>
     </div>
 
     <div class="flex gap-3">
+      <button
+        class="cursor-pointer text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
+        @click="setLocale(currentLang.changeValue)"
+      >
+        {{ currentLang.title }}
+      </button>
+
       <NuxtLink to="/">
         <Icon
           name="line-md:github"
