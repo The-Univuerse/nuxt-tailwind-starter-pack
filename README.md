@@ -13,10 +13,9 @@
 
 ## Features
 
-<p style="display: flex;align-items: center; gap: 5px">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 168"><path fill="#00dc82" d="M143.618 167.029h95.166c3.023 0 5.992-.771 8.61-2.237a16.96 16.96 0 0 0 6.302-6.115a16.3 16.3 0 0 0 2.304-8.352c0-2.932-.799-5.811-2.312-8.35L189.778 34.6a16.97 16.97 0 0 0-6.301-6.113a17.6 17.6 0 0 0-8.608-2.238c-3.023 0-5.991.772-8.609 2.238a16.96 16.96 0 0 0-6.3 6.113l-16.342 27.473l-31.95-53.724a17 17 0 0 0-6.304-6.112A17.64 17.64 0 0 0 96.754 0c-3.022 0-5.992.772-8.61 2.237a17 17 0 0 0-6.303 6.112L2.31 141.975a16.3 16.3 0 0 0-2.31 8.35c0 2.932.793 5.813 2.304 8.352a16.96 16.96 0 0 0 6.302 6.115a17.6 17.6 0 0 0 8.61 2.237h59.737c23.669 0 41.123-10.084 53.134-29.758l29.159-48.983l15.618-26.215l46.874 78.742h-62.492zm-67.64-26.24l-41.688-.01L96.782 35.796l31.181 52.492l-20.877 35.084c-7.976 12.765-17.037 17.416-31.107 17.416" /></svg>
-<a style="margin-right: 5px" href="https://nuxt.com/">Nuxt 3</a> - SSR, ESR, File-based routing, components auto importing, modules, etc.
-</p>
+![Nuxt](/assets/image/docAsset/nuxt.svg) [Nuxt v3](https://nuxt.com/) - SSR, ESR, File-based routing, components auto importing, modules, etc.
+
+![Vite](/assets/image/docAsset/vite.svg) [Vite](https://vite.dev/) - Next generation frontend tooling. It's fast!
 
 <p style="display: flex;align-items: center; gap: 5px">
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 257">
@@ -62,9 +61,8 @@ TypeScript, Don't worry about that. Nuxt will be handle it
 
 <p style="display: flex;align-items: center; gap: 5px">
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 225"><path fill="#8080f2" d="m77.965 80.568l48.57-28.042a3.93 3.93 0 0 1 3.93 0l48.57 28.042A3.93 3.93 0 0 1 181 83.971v56.084c0 1.403-.75 2.7-1.965 3.403l-48.57 28.042a3.93 3.93 0 0 1-3.93 0l-48.57-28.042A3.93 3.93 0 0 1 76 140.055V83.97c.001-1.404.75-2.7 1.965-3.403"/><path fill="#4b32c3" d="M254.417 107.417L196.323 6.35C194.213 2.696 190.315 0 186.095 0H69.906c-4.22 0-8.12 2.696-10.23 6.35L1.583 107.194c-2.11 3.655-2.11 8.268 0 11.923l58.093 100.239c2.11 3.654 6.01 5.522 10.23 5.522h116.188c4.22 0 8.119-1.812 10.228-5.467l58.094-100.402c2.112-3.653 2.112-7.938 0-11.592m-48.105 48.6c0 1.485-.894 2.86-2.182 3.604l-73.999 42.693a4.21 4.21 0 0 1-4.186 0l-74.056-42.693c-1.287-.744-2.188-2.118-2.188-3.605V70.628c0-1.487.888-2.86 2.176-3.604l73.995-42.694a4.2 4.2 0 0 1 4.185 0l74.06 42.694c1.289.744 2.195 2.117 2.195 3.604z"/></svg>
-<a style="margin-right: 5px" href="https://vite-pwa-org.netlify.app/">Eslint</a> - Press <code>CMD + V</code> let's eslint take your code to a Beauty Salon see this
+<a style="margin-right: 5px" href="https://vite-pwa-org.netlify.app/">Eslint</a> - Press <code>CMD + S</code> let's eslint take your code to a Beauty Salon see this
 </p>
-
 <p style="display: flex;align-items: center; gap: 5px">
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" d="m478.33 433.6l-90-218a22 22 0 0 0-40.67 0l-90 218a22 22 0 1 0 40.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 0 0 458 464a22 22 0 0 0 20.32-30.4ZM334.83 362L368 281.65L401.17 362Zm-66.99-19.08a22 22 0 0 0-4.89-30.7c-.2-.15-15-11.13-36.49-34.73c39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 0 0 0-44H214V70a22 22 0 0 0-44 0v20H54a22 22 0 0 0 0 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36c-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 0 0-40.58 17c.58 1.38 14.55 34.23 52.86 83.93c.92 1.19 1.83 2.35 2.74 3.51c-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1 0 21.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59c22.52 24.08 38 35.44 38.93 36.1a22 22 0 0 0 30.75-4.9Z"/></svg>
 <a style="margin-right: 5px" href="https://github.com/The-Univuerse/nuxt-tailwind-starter-pack/tree/main/i18n/locales">Multi Language</a> - Ship your websites around the world and make sure they are know your achievements
