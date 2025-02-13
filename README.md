@@ -19,7 +19,7 @@
 
 ![Tailwind CSS v4](/assets/image/docAsset/tailwind.svg) [Tailwindcss v4](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
 
-![@nuxt/icon](/assets/image/docAsset/nuxtIcon.svg) [Vite](https://github.com/nuxt/icon) - 200,000+ ready to use icons from [iconify](https://icon-sets.iconify.design/)
+![@nuxt/icon](/assets/image/docAsset/nuxtIcon.svg) [@nuxt/icon](https://github.com/nuxt/icon) - 200,000+ ready to use icons from [iconify](https://icon-sets.iconify.design/)
 
 ![typescript](/assets/image/docAsset/typescript.svg) Typescript, Don't worry about that. Nuxt will be handle it
 
