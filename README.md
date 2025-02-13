@@ -11,7 +11,7 @@
 </h2>
 <br>
 
-## Features
+### Features
 
 ![Nuxt](/assets/image/docAsset/nuxt.svg) [Nuxt v3](https://nuxt.com/) - SSR, ESR, File-based routing, components auto importing, modules, etc.
 
@@ -34,6 +34,34 @@
 ![eslint](/assets/image/docAsset/eslint.svg) Eslint - Press <code>CMD + S</code> let's eslint take your code to a Beauty Salon see this
 
 ![multilanguage](/assets/image/docAsset/multilanguage.svg) [Multi Language](https://github.com/The-Univuerse/nuxt-tailwind-starter-pack/tree/main/i18n/locales) - Ship your websites around the world and make sure they are know your achievements
+
+### Plugins
+
+- [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/) - Dark and Light mode with auto detection made easy with Nuxt 🌗
+
+- [@nuxtjs/i18n](https://i18n.nuxtjs.org/) - I18n (Internationalization) module for your Nuxt project powered by Vue I18n.
+
+- [@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html) - Type Safe, Extensible, and Modular by design. Forget you are even using a store.
+
+- [@vueuse/nuxt](https://vueuse.org/guide/#nuxt) - Collection of Essential Vue Composition Utilities
+
+- [@nuxt/icon](https://github.com/nuxt/icon) - The <Icon> component, supporting Iconify, Emojis and custom components.
+
+- [@vite-pwa/nuxt](https://github.com/vite-pwa/nuxt) - Zero-config PWA Plugin for Nuxt
+
+### Coding Style
+
+- Use composition API with typescript lang `<script lang="ts" setup>`
+- Linter by [Eslint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+
+### Tools
+
+- [VsCode Extensions](https://github.com/The-Univuerse/nuxt-tailwind-starter-pack/blob/main/.vscode/extensions.json)
+
+  - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally)
+  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)
+  - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 # Nuxt Minimal Starter
 
