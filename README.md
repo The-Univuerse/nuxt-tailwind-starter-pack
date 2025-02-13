@@ -63,11 +63,18 @@
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-# Nuxt Minimal Starter
+### Try it Now!
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Create Repo from this template on Github](https://github.com/The-Univuerse/nuxt-tailwind-starter-pack/generate)
 
-## Setup
+##### Clone to Local
+
+```bash
+npx degit The-Univuerse/nuxt-tailwind-starter-pack nuxt-tailwind
+cd nuxt-tailwind
+```
+
+#### Setup
 
 Make sure to install dependencies:
 
@@ -85,7 +92,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+#### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -103,7 +110,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+#### Production
 
 Build the application for production:
 
@@ -136,5 +143,9 @@ yarn preview
 # bun
 bun run preview
 ```
+
+##### Nuxt Minimal Starter
+
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
