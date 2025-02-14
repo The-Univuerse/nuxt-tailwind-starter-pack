@@ -2,15 +2,7 @@
 import type { PrivateFormContext } from 'vee-validate'
 
 definePageMeta({
-  title: 'Form',
-})
-
-const route = useRoute()
-
-useHead({
-  titleTemplate: (titleChunk) => {
-    return `${titleChunk} - ${route.meta.title}`
-  },
+  title: 'routes.form',
 })
 
 const form = ref < PrivateFormContext > ()
