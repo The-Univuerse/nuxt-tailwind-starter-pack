@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import type { PrivateFormContext } from 'vee-validate'
-
 definePageMeta({
   title: 'routes.form',
 })
 
-const form = ref < PrivateFormContext > ()
-
+const form = ref <UserValidation> ()
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')

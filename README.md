@@ -21,7 +21,7 @@
 
 ![@nuxt/icon](/assets/image/docAsset/nuxtIcon.svg) [@nuxt/icon](https://github.com/nuxt/icon) - 200,000+ ready to use icons from [iconify](https://icon-sets.iconify.design/)
 
-![typescript](/assets/image/docAsset/typescript.svg) Typescript, Don't worry about that. Nuxt will be handle it
+![typescript](/assets/image/docAsset/typescript.svg) Typescript, Don't worry about that.
 
 ![pinia](/assets/image/docAsset/pinia.svg) Pinia, The intuitive store for Vue.js. [(./stores/numberCounter.ts)](https://github.com/The-Univuerse/nuxt-tailwind-starter-pack/blob/main/stores/numberCounter.ts)
 
