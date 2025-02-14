@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       title: 'The Univuerse',
+      charset: 'utf-8',
       link: [
         { rel: 'icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -33,13 +37,24 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
+    // '@nuxtjs/seo',
   ],
 
   i18n: {
     lazy: true,
+    baseUrl: 'http://localhost:3000/',
     defaultLocale: 'en',
     langDir: 'locales',
-    locales: [{ code: 'en', file: 'en', name: 'English' }, { code: 'fr', file: 'fr', name: 'France' }],
+    locales: [
+      { code: 'en', language: 'en', file: 'en', name: 'English' },
+      { code: 'fr', language: 'fr', file: 'fr', name: 'France' },
+    ],
+  },
+
+  typescript: {
+    tsConfig: {
+      include: ['index.d.ts'],
+    },
   },
 
   pinia: {
@@ -49,7 +64,12 @@ export default defineNuxtConfig({
     class: 'icon', // default <Icon> class applied
     mode: 'css', //
     serverBundle: {
-      collections: ['tabler', 'logos', 'line-md', 'devicon'],
+      collections: [
+        'tabler',
+        'logos',
+        'line-md',
+        'devicon',
+      ],
       externalizeIconsJson: true,
     },
   },

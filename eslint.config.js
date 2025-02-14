@@ -5,7 +5,11 @@ export default antfu({
   formatters: true,
   vue: {
     overrides: {
-      'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false }],
+      'vue/component-name-in-template-casing': [
+        'error',
+        'PascalCase',
+        { registeredComponentsOnly: false },
+      ],
       'vue/singleline-html-element-content-newline': ['error'],
       'vue/prefer-true-attribute-shorthand': ['error'],
       'vue/first-attribute-linebreak': [
@@ -18,23 +22,29 @@ export default antfu({
       'vue/no-empty-component-block': ['error'],
       'vue/multiline-html-element-content-newline': ['error'],
       'vue/mustache-interpolation-spacing': ['error'],
-      'vue/html-self-closing': ['error', {
-        html: {
-          normal: 'never',
-          void: 'always',
+      'vue/html-self-closing': [
+        'error',
+        {
+          html: {
+            normal: 'never',
+            void: 'always',
+          },
+          svg: 'always',
+          math: 'always',
         },
-        svg: 'always',
-        math: 'always',
-      }],
+      ],
       'vue/html-indent': ['error'],
-      'vue/max-attributes-per-line': ['error', {
-        singleline: {
-          max: 1,
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          singleline: {
+            max: 1,
+          },
+          multiline: {
+            max: 1,
+          },
         },
-        multiline: {
-          max: 1,
-        },
-      }],
+      ],
     },
   },
 
@@ -54,6 +64,10 @@ export default antfu({
     indent: 2,
     overrides: {
       'antfu/top-level-function': 'off',
+      'array-bracket-newline': [
+        'error',
+        { minItems: 2 },
+      ],
     },
   },
   perfectionist: true,

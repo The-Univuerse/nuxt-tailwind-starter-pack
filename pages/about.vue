@@ -2,15 +2,7 @@
 import type { MaybeElement } from '@vueuse/core'
 
 definePageMeta({
-  title: 'About',
-})
-
-const route = useRoute()
-
-useHead({
-  titleTemplate: (titleChunk) => {
-    return `${titleChunk} - ${route.meta.title}`
-  },
+  title: 'routes.about',
 })
 
 const counterStore = useNumberCounter()
@@ -53,7 +45,7 @@ const { playState } = useAnimate(
           v-if="playState === 'finished'"
           class="text-secondary mt-3 text-lg md:text-xl text-center font-medium"
         >
-          Save your crucial time with our univuerse
+          {{ $t('tagline') }} univuerse
         </p>
       </Transition>
 
