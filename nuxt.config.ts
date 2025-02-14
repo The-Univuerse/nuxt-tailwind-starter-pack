@@ -51,11 +51,11 @@ export default defineNuxtConfig({
     ],
   },
 
-  typescript: {
-    tsConfig: {
-      include: ['index.d.ts'],
-    },
-  },
+  // typescript: {
+  //   tsConfig: {
+  //     include: ['types/*.d.ts'],
+  //   },
+  // },
 
   pinia: {
     storesDirs: ['./stores/**'],

@@ -1,20 +1,6 @@
 <script setup lang="ts">
-import { setLocale } from '@vee-validate/i18n'
-
-interface Theme {
-  icon: string
-  value: string
-}
-
-interface Lang {
-  title: string
-  value: string
-  changeValue: 'en' | 'fr'
-}
-
 const colorMode = useColorMode()
-const { setLocale: changeLang, locale } = useI18n()
-
+const { setLocale, locale } = useI18n()
 const colorTheme = toRef(colorMode.value)
 
 const themes = ref<Theme[]>([
@@ -59,11 +45,6 @@ watch(colorTheme, (value) => {
 const switchTheme = (value: string): void => {
   colorMode.preference = value
 }
-
-const switchLang = (langValue: Lang['changeValue']) => {
-  changeLang(langValue)
-  setLocale(langValue)
-}
 </script>
 
 <template>
@@ -95,7 +76,7 @@ const switchLang = (langValue: Lang['changeValue']) => {
       <button
         v-if="currentLang"
         class="cursor-pointer text-secondary transition duration-300 ease-in-out hover:text-neutral-400"
-        @click="switchLang(currentLang.changeValue)"
+        @click="setLocale(currentLang.changeValue)"
       >
         {{ currentLang.title }}
       </button>
