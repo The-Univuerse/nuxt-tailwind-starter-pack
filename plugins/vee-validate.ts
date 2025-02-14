@@ -7,7 +7,10 @@ import { all } from '@vee-validate/rules'
 import { configure, defineRule, Field, Form } from 'vee-validate'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  Object.entries(all).forEach(([name, rule]) => {
+  Object.entries(all).forEach(([
+    name,
+    rule,
+  ]) => {
     defineRule(name, rule)
   })
 

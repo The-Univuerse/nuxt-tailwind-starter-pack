@@ -102,7 +102,7 @@ const switchLang = (langValue: Lang['changeValue']) => {
 
       <NuxtLink
         target="_blank"
-        href="/https://github.com/The-Univuerse/nuxt-tailwind-starter-pack"
+        href="https://github.com/The-Univuerse/nuxt-tailwind-starter-pack"
       >
         <Icon
           name="line-md:github"

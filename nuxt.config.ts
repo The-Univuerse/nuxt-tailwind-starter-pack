@@ -39,7 +39,10 @@ export default defineNuxtConfig({
     lazy: true,
     defaultLocale: 'en',
     langDir: 'locales',
-    locales: [{ code: 'en', file: 'en', name: 'English' }, { code: 'fr', file: 'fr', name: 'France' }],
+    locales: [
+      { code: 'en', file: 'en', name: 'English' },
+      { code: 'fr', file: 'fr', name: 'France' },
+    ],
   },
 
   pinia: {
@@ -49,7 +52,12 @@ export default defineNuxtConfig({
     class: 'icon', // default <Icon> class applied
     mode: 'css', //
     serverBundle: {
-      collections: ['tabler', 'logos', 'line-md', 'devicon'],
+      collections: [
+        'tabler',
+        'logos',
+        'line-md',
+        'devicon',
+      ],
       externalizeIconsJson: true,
     },
   },
