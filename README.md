@@ -76,6 +76,16 @@ cd nuxt-tailwind
 
 #### Setup
 
+Setup Environment
+
+```bash
+cp env_example .env
+# change the environment based on your project
+
+NUXT_BASE_URL=your_base_url
+NUXT_SITE_NAME=your_site_name
+```
+
 Make sure to install dependencies:
 
 ```bash
