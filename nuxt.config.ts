@@ -7,14 +7,18 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
+      htmlAttrs: { lang: 'en' },
       title: 'The Univuerse',
       charset: 'utf-8',
       link: [
-        { rel: 'icon', href: '/favicon.ico' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'icon',
+          href: '/favicon.ico',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
         {
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
@@ -26,40 +30,58 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: { name: 'slide-fade', mode: 'out-in' },
+    pageTransition: {
+      name: 'slide-fade',
+      mode: 'out-in',
+    },
   },
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  vite: { plugins: [tailwindcss()] },
   modules: [
     '@nuxt/icon',
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
-    // '@nuxtjs/seo',
+    '@nuxtjs/seo',
   ],
+  robots: {
+    // provide simple disallow rules for all robots `user-agent: *`
 
-  i18n: {
-    lazy: true,
-    baseUrl: 'http://localhost:3000/',
-    defaultLocale: 'en',
-    langDir: 'locales',
-    locales: [
-      { code: 'en', language: 'en', file: 'en', name: 'English' },
-      { code: 'fr', language: 'fr', file: 'fr', name: 'France' },
+    allow: [
+      '/',
+      '/about',
+      '/form',
     ],
   },
 
-  // typescript: {
-  //   tsConfig: {
-  //     include: ['types/*.d.ts'],
-  //   },
-  // },
-
-  pinia: {
-    storesDirs: ['./stores/**'],
+  site: {
+    url: process.env.NUXT_BASE_URL,
+    name: process.env.NUXT_SITE_NAME,
   },
+
+  i18n: {
+    lazy: true,
+    baseUrl: process.env.NUXT_BASE_URL,
+    defaultLocale: 'en',
+    langDir: 'locales',
+    strategy: 'prefix',
+    locales: [
+      {
+        code: 'en',
+        language: 'en',
+        file: 'en',
+        name: 'English',
+      },
+      {
+        code: 'fr',
+        language: 'fr',
+        file: 'fr',
+        name: 'France',
+      },
+    ],
+  },
+
+  pinia: { storesDirs: ['./stores/**'] },
   icon: {
     class: 'icon', // default <Icon> class applied
     mode: 'css', //

@@ -37,12 +37,8 @@ export default antfu({
       'vue/max-attributes-per-line': [
         'error',
         {
-          singleline: {
-            max: 1,
-          },
-          multiline: {
-            max: 1,
-          },
+          singleline: { max: 1 },
+          multiline: { max: 1 },
         },
       ],
     },
@@ -50,6 +46,13 @@ export default antfu({
 
   rules: {
     'node/prefer-global/process': 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        multiline: true,
+        minProperties: 2,
+      },
+    ],
   },
   javascript: {
     overrides: {
