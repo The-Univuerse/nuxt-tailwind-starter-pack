@@ -8,7 +8,11 @@ const colorMode = useColorMode()
 
 definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
 
-defineOgImageScreenshot()
+// defineOgImageScreenshot()
+
+const route = useRoute()
+
+useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
 
 const featuresList = computed(() => {
   return [

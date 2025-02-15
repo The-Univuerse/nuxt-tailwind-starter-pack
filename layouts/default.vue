@@ -2,7 +2,7 @@
 const route = useRoute()
 const { t } = useI18n()
 const head = useLocaleHead()
-const title = computed(() => t(route.meta.title) ?? '')
+const title = computed(() => t(route.meta?.title) ?? '')
 
 const { titleApp } = useAppConfig()
 </script>

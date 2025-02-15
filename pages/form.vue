@@ -1,12 +1,14 @@
 <script setup lang="ts">
-definePageMeta({
-  title: 'routes.form',
-})
+definePageMeta({ title: 'routes.form' })
 
 const form = ref <UserValidation> ()
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
+
+const route = useRoute()
+
+useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
 
 // Form Event Validate https://vee-validate.logaretm.com/v4/api/form/#slots
 const submit = async () => {
