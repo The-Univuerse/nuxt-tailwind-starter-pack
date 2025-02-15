@@ -6,32 +6,39 @@ import TailwindcssLight from '@/assets/icon/tailwindcss-light.svg'
 
 const colorMode = useColorMode()
 
-definePageMeta({
-  title: 'routes.home', // Populate by i18n resources
-})
+definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
+
+defineOgImageScreenshot()
 
 const featuresList = computed(() => {
   return [
     {
       icon: 'logos:nuxt-icon',
+      href: 'https://nuxt.com/',
     },
     {
       icon: 'devicon:tailwindcss',
+      href: 'https://tailwindcss.com/',
     },
     {
       icon: 'logos:pinia',
+      href: 'https://pinia.vuejs.org/',
     },
     {
       icon: 'logos:pwa',
+      href: 'https://vite-pwa-org.netlify.app/',
     },
     {
       icon: 'logos:vueuse',
+      href: 'https://vueuse.org/',
     },
     {
       icon: 'devicon:veevalidate',
+      href: 'https://vee-validate.logaretm.com/v4/',
     },
     {
       icon: 'devicon:eslint',
+      href: 'https://eslint.org/',
     },
   ]
 })
@@ -96,12 +103,18 @@ const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 't
 
         <div class="flex justify-center">
           <div class="flex w-[250px] sm:w-full gap-5 mt-16 items-center flex-wrap justify-center">
-            <Icon
+            <NuxtLink
               v-for="(data, index) in featuresList"
               :key="index"
-              :name="data.icon"
-              class="text-3xl text-secondary transition duration-300 ease-in-out dark:hover:text-white cursor-pointer"
-            />
+              :href="data.href"
+              target="_blank"
+              class="w-auto flex items-center"
+            >
+              <Icon
+                :name="data.icon"
+                class="text-3xl text-secondary transition duration-300 ease-in-out dark:hover:text-white cursor-pointer"
+              />
+            </NuxtLink>
           </div>
         </div>
       </div>
