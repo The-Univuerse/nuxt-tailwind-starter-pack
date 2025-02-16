@@ -55,6 +55,7 @@ definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
 
 <template>
   <div class="flex h-full relative text-white justify-center items-center">
+    <OgImageScreenshot />
     <ClientOnly>
       <div class="flex relative flex-col">
         <div class="flex justify-center">
