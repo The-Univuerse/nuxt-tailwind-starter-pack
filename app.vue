@@ -1,3 +1,7 @@
+<script setup lang="ts">
+defineOgImage({ component: 'root' })
+</script>
+
 <template>
   <NuxtLayout class="">
     <NuxtPage />

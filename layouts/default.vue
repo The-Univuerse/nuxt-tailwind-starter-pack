@@ -3,8 +3,6 @@ const route = useRoute()
 const { t } = useI18n()
 const head = useLocaleHead()
 const title = computed(() => t(route.meta?.title) ?? '')
-
-const { titleApp } = useAppConfig()
 </script>
 
 <template>
@@ -14,7 +12,7 @@ const { titleApp } = useAppConfig()
       :dir="head.htmlAttrs?.dir"
     >
       <Head>
-        <Title>{{ `${title.charAt(0).toUpperCase()}${title.slice(1)}` }} - {{ titleApp }}</Title>
+        <Title>{{ `${title.charAt(0).toUpperCase()}${title.slice(1)}` }}</Title>
         <template
           v-for="link in head.link"
           :key="link.hid"

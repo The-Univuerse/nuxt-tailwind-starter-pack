@@ -1,11 +1,7 @@
 <script lang="ts" setup>
 import type { MaybeElement } from '@vueuse/core'
 
-definePageMeta({ title: 'routes.about' })
-
 const route = useRoute()
-
-useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
 
 const counterStore = useNumberCounter()
 const { counter } = storeToRefs(counterStore)
@@ -26,6 +22,10 @@ const { playState } = useAnimate(
     easing: 'cubic-bezier(0.46, 0.03, 0.52, 0.96)',
   },
 )
+
+definePageMeta({ title: 'routes.about' })
+
+useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
 </script>
 
 <template>

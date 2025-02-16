@@ -5,14 +5,9 @@ import TailwindcssDark from '@/assets/icon/tailwindcss-dark.svg'
 import TailwindcssLight from '@/assets/icon/tailwindcss-light.svg'
 
 const colorMode = useColorMode()
-
-definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
-
-// defineOgImageScreenshot()
-
 const route = useRoute()
 
-useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
+const { t } = useI18n()
 
 const featuresList = computed(() => {
   return [
@@ -46,10 +41,16 @@ const featuresList = computed(() => {
     },
   ]
 })
-
 const nuxtIcon = computed(() => colorMode.value === 'light' ? NuxtIconLight : NuxtIconDark)
 const tailwindcssIcon = computed(() => colorMode.value === 'light' ? TailwindcssLight : TailwindcssDark)
 const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 'text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text')
+
+// SEO Configuration
+useSeoMeta({
+  description: () => `This is a description for the ${t(route.meta.title)} page`,
+  twitterDescription: () => `This is a description for the ${t(route.meta.title)} page`,
+})
+definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
 </script>
 
 <template>

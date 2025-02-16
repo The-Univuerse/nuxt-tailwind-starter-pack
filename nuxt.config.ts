@@ -81,7 +81,10 @@ export default defineNuxtConfig({
     ],
   },
 
-  ogImage: { defaults: { renderer: 'chromium' } },
+  ogImage: {
+    defaults: { renderer: 'satori' },
+    zeroRuntime: true,
+  },
 
   pinia: { storesDirs: ['./stores/**'] },
   icon: {
