@@ -11,30 +11,6 @@ const title = computed(() => t(route.meta?.title) ?? '')
       :lang="head.htmlAttrs?.lang"
       :dir="head.htmlAttrs?.dir"
     >
-      <Head>
-        <Title>{{ `${title.charAt(0).toUpperCase()}${title.slice(1)}` }}</Title>
-        <template
-          v-for="link in head.link"
-          :key="link.hid"
-        >
-          <Link
-            :id="link.hid"
-            :rel="link.rel"
-            :href="link.href"
-            :hreflang="link.hreflang"
-          />
-        </template>
-        <template
-          v-for="meta in head.meta"
-          :key="meta.hid"
-        >
-          <Meta
-            :id="meta.hid"
-            :property="meta.property"
-            :content="meta.content"
-          />
-        </template>
-      </Head>
       <Body>
         <div class="h-screen bg-background">
           <Navigation />

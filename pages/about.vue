@@ -1,13 +1,10 @@
 <script lang="ts" setup>
 import type { MaybeElement } from '@vueuse/core'
 
-const route = useRoute()
-
-const counterStore = useNumberCounter()
-const { counter } = storeToRefs(counterStore)
-
 const el = useTemplateRef<MaybeElement>('el')
-
+const counterStore = useNumberCounter()
+const { t } = useI18n()
+const { counter } = storeToRefs(counterStore)
 const { playState } = useAnimate(
   el,
   [
@@ -23,9 +20,29 @@ const { playState } = useAnimate(
   },
 )
 
-definePageMeta({ title: 'routes.about' })
+const description = ref('The Univuerse ')
 
-useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
+const title = computed(() => `${t('routes.about').charAt(0).toUpperCase()}${t('routes.about').slice(1)}`)
+
+useSeoMeta({
+  titleTemplate: '%s - %siteName',
+  title: title.value,
+  // og title is not effected by titleTemplate, we can use template params here if we need
+  ogTitle: '%s - %siteName',
+
+  twitterTitle: '%s - %siteName',
+  // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
+
+  description: description.value,
+  ogDescription: description.value,
+  // explicit twitter title is only needed when we want to display something just for X
+  twitterDescription: description.value,
+})
+
+defineOgImageComponent('Default', {
+  title: 'Welcome To The Univuerse',
+  description: description.value,
+})
 </script>
 
 <template>

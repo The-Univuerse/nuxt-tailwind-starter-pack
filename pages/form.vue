@@ -4,7 +4,11 @@ const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
 
-const route = useRoute()
+const { t } = useI18n()
+
+const description = ref('The Univuerse ')
+
+const title = computed(() => `${t('routes.form').charAt(0).toUpperCase()}${t('routes.form').slice(1)}`)
 
 // Form Event Validate https://vee-validate.logaretm.com/v4/api/form/#slots
 const submit = async () => {
@@ -20,8 +24,25 @@ const submit = async () => {
   }
 }
 
-definePageMeta({ title: 'routes.form' })
-useSeoMeta({ description: () => `This is a description for the ${route.meta.title} page` })
+useSeoMeta({
+  titleTemplate: '%s - %siteName',
+  title: title.value,
+  // og title is not effected by titleTemplate, we can use template params here if we need
+  ogTitle: '%s - %siteName',
+
+  twitterTitle: '%s - %siteName',
+  // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
+
+  description: description.value,
+  ogDescription: description.value,
+  // explicit twitter title is only needed when we want to display something just for X
+  twitterDescription: description.value,
+})
+
+defineOgImageComponent('Default', {
+  title: 'Welcome To The Univuerse',
+  description: description.value,
+})
 </script>
 
 <template>

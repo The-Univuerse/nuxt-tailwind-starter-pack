@@ -80,9 +80,6 @@ export default defineNuxtConfig({
       },
     ],
   },
-
-  ogImage: { defaults: { renderer: 'chromium' } },
-
   pinia: { storesDirs: ['./stores/**'] },
   icon: {
     class: 'icon', // default <Icon> class applied

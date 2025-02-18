@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-const { setLocale, locale } = useI18n()
+const {
+  setLocale,
+  locale,
+} = useI18n()
 const colorTheme = toRef(colorMode.value)
 
 const themes = ref<Theme[]>([
@@ -30,12 +33,20 @@ const allAvailableLocales = ref<Lang[]>([
 
 const currentTheme = computed<Theme>(() => {
   const dataTheme = themes.value.find((data: Theme) => data.value !== colorMode.value)
-  return dataTheme || { icon: '', value: '', changeValue: '' }
+  return dataTheme || {
+    icon: '',
+    value: '',
+    changeValue: '',
+  }
 })
 
 const currentLang = computed<Lang>(() => {
   const currentDataLang = allAvailableLocales.value.find(item => item.value === locale.value)
-  return currentDataLang || { title: '', value: '', changeValue: 'en' }
+  return currentDataLang || {
+    title: '',
+    value: '',
+    changeValue: 'en',
+  }
 })
 
 watch(colorTheme, (value) => {

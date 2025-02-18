@@ -5,10 +5,11 @@ import TailwindcssDark from '@/assets/icon/tailwindcss-dark.svg'
 import TailwindcssLight from '@/assets/icon/tailwindcss-light.svg'
 
 const colorMode = useColorMode()
-const route = useRoute()
-
 const { t } = useI18n()
 
+const description = ref('Welcome to the universe, Save your crucial time with our univuerse ')
+
+const title = computed(() => `${t('routes.home').charAt(0).toUpperCase()}${t('routes.home').slice(1)}`)
 const featuresList = computed(() => {
   return [
     {
@@ -45,17 +46,29 @@ const nuxtIcon = computed(() => colorMode.value === 'light' ? NuxtIconLight : Nu
 const tailwindcssIcon = computed(() => colorMode.value === 'light' ? TailwindcssLight : TailwindcssDark)
 const headHero = computed(() => colorMode.value === 'light' ? 'text-accent' : 'text-transparent bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text')
 
-// SEO Configuration
 useSeoMeta({
-  description: () => `This is a description for the ${t(route.meta.title)} page`,
-  twitterDescription: () => `This is a description for the ${t(route.meta.title)} page`,
+  titleTemplate: '%s - %siteName',
+  title: title.value,
+  // og title is not effected by titleTemplate, we can use template params here if we need
+  ogTitle: '%s - %siteName',
+
+  twitterTitle: '%s - %siteName',
+  // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
+
+  description: description.value,
+  ogDescription: description.value,
+  // explicit twitter title is only needed when we want to display something just for X
+  twitterDescription: description.value,
 })
-definePageMeta({ title: 'routes.home' }) // Populate by i18n resources
+
+defineOgImageComponent('Default', {
+  title: 'Welcome To The Univuerse',
+  description: description.value,
+})
 </script>
 
 <template>
   <div class="flex h-full relative text-white justify-center items-center">
-    <OgImageScreenshot />
     <ClientOnly>
       <div class="flex relative flex-col">
         <div class="flex justify-center">
